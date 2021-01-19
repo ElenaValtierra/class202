@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}       
+         <style>
+           body{ background-color: yellow;}
+           li {
+               display:flex;
+           }
+        </style>
+        {% endblock %}
+        {% block javascripts %}{% endblock %}
+    </head>
+    <body>
+    <li>
+        <a href="index.html.twig"><ul>Accueil</ul><a/>
+        <a href="propos.html.twig"><ul>a propos</ul><a/>
+        <a href="#"><ul>contact</ul><a/>
+        <a href="#"><ul>bloc</ul><a/>
+    </li>    
+        {% block body %}{% endblock %}
+    </body>
+</html>

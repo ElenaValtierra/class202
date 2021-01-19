@@ -1,0 +1,22 @@
+{# templates/blog/index.html.twig #}
+{% extends 'base.html.twig' %}
+{% block title %}Blog Index{% endblock %}
+{% block body %}
+    <h1>hello word</h1>
+    <p id="para">Some text here</p>
+    <p id="te">Some text here</p>
+    <button onclick="changeColor('blue');">blue</button>
+    <button onclick="changeColor('red');">red</button>
+    <button onclick="changeColor('texte');">ok</button>
+    <script>
+        function changeColor(newColor) {
+            var elem = document.getElementById('para');
+            elem.style.color = newColor;
+        } 
+        function change(text) {
+            var elem = document.getElementById('te');
+            elem.insertAdjacentHTML('afterend', 'hello world')
+        }
+    </script>
+{% endblock %}
+
